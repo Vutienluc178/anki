@@ -99,7 +99,7 @@
                 <div>
                     <label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Chế độ học</label>
                     <div class="grid grid-cols-2 gap-3">
-                        <button id="btn-mode-normal" onclick="setMode('normal')" class="py-3 px-4 rounded-lg border-2 font-medium flex items-center justify-center gap-2 transition-all border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700">
+                        <button id="btn-mode-normal" onclick="setMode('normal')" class="py-3 px-4 rounded-lg border-2 font-medium flex items-center justify-center gap-2 transition-all border-blue-500 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400">
                             <i class="ph ph-book-open"></i> Cơ bản
                         </button>
                         <button id="btn-mode-spaced" onclick="setMode('spaced')" class="py-3 px-4 rounded-lg border-2 font-medium flex items-center justify-center gap-2 transition-all border-indigo-500 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400">
@@ -252,13 +252,13 @@
                 
                 <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700">
                     <h4 class="font-bold text-slate-800 dark:text-white text-base mb-2 flex items-center gap-2"><i class="ph-fill ph-medal text-amber-500"></i> Cách tính điểm Hiệu Quả Tự Động</h4>
-                    <p class="mb-2 text-xs">Điểm được đánh giá tự động, chính xác dựa trên <b class="text-slate-700 dark:text-slate-100">tốc độ phản xạ trung bình</b> (Tổng thời gian / Tổng số lượt lật thẻ).</p>
+                    <p class="mb-2 text-xs">Điểm được đánh giá dựa trên sự kết hợp giữa <b>tổng thời gian học (phải từ 5 phút)</b> và <b>tốc độ phản xạ trung bình</b>.</p>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-3 text-xs">
-                        <div class="p-2 bg-violet-50 dark:bg-violet-900/30 rounded border border-violet-100 dark:border-violet-800"><span class="font-bold text-violet-700 dark:text-violet-400">💎 Xuất sắc</span><br> Dưới 15 giây/thẻ</div>
-                        <div class="p-2 bg-amber-50 dark:bg-amber-900/30 rounded border border-amber-100 dark:border-amber-800"><span class="font-bold text-amber-600 dark:text-amber-400">🥇 Giỏi</span><br> 15 - 30 giây/thẻ</div>
-                        <div class="p-2 bg-slate-100 dark:bg-slate-700 rounded border border-slate-200 dark:border-slate-600"><span class="font-bold text-slate-600 dark:text-slate-300">🥈 Khá</span><br> 30 - 60 giây/thẻ</div>
-                        <div class="p-2 bg-orange-50 dark:bg-orange-900/30 rounded border border-orange-100 dark:border-orange-800"><span class="font-bold text-orange-600 dark:text-orange-400">🥉 Trung bình</span><br> Trên 60 giây/thẻ</div>
-                        <div class="p-2 bg-red-50 dark:bg-red-900/30 rounded border border-red-100 dark:border-red-800 md:col-span-2 text-center"><span class="font-bold text-red-600 dark:text-red-400">⚠️ Cảnh báo Học vẹt</span><br> Dưới 5 giây/thẻ (Nhấn bừa không đọc)</div>
+                        <div class="p-2 bg-violet-50 dark:bg-violet-900/30 rounded border border-violet-100 dark:border-violet-800"><span class="font-bold text-violet-700 dark:text-violet-400">👑 Xuất sắc</span><br> ≥ 5p học & dưới 15s/thẻ</div>
+                        <div class="p-2 bg-amber-50 dark:bg-amber-900/30 rounded border border-amber-100 dark:border-amber-800"><span class="font-bold text-amber-600 dark:text-amber-400">🏆 Giỏi</span><br> ≥ 5p học & dưới 30s/thẻ</div>
+                        <div class="p-2 bg-slate-100 dark:bg-slate-700 rounded border border-slate-200 dark:border-slate-600"><span class="font-bold text-slate-600 dark:text-slate-300">🥇 Khá</span><br> ≥ 5p học & dưới 60s/thẻ</div>
+                        <div class="p-2 bg-orange-50 dark:bg-orange-900/30 rounded border border-orange-100 dark:border-orange-800"><span class="font-bold text-orange-600 dark:text-orange-400">🥈 T.Bình</span><br> Dưới 5p hoặc trên 60s/thẻ</div>
+                        <div class="p-2 bg-red-50 dark:bg-red-900/30 rounded border border-red-100 dark:border-red-800 md:col-span-2 text-center"><span class="font-bold text-red-600 dark:text-red-400">☹️ Cảnh báo</span><br> Dưới 5 giây/thẻ (Nhấn bừa không đọc)</div>
                     </div>
                 </div>
             </div>
@@ -305,7 +305,7 @@
     <div id="summary-screen" class="hidden flex-1 flex items-center justify-center p-4 overflow-y-auto">
         <div id="summary-card-content" class="max-w-md w-full bg-white dark:bg-slate-800 rounded-3xl shadow-xl overflow-hidden mt-8 mb-8 relative">
             <div id="summary-header" class="p-8 text-white text-center bg-blue-600 transition-colors duration-500">
-                <div class="text-6xl mb-4 drop-shadow-lg" id="summary-medal-icon">🏆</div>
+                <div class="text-7xl mb-4 drop-shadow-lg" id="summary-medal-icon">🏆</div>
                 <h2 class="text-2xl font-bold mb-1">Tuyệt vời, <span id="summary-student-name"></span>!</h2>
                 <p class="text-white/80 text-sm font-medium" id="summary-time-text">Bạn đã luyện tập trong 00:00</p>
                 <p class="text-white/90 font-bold mt-2" id="summary-session-count"></p>
@@ -317,7 +317,7 @@
                 <div class="text-center mb-6">
                     <p class="text-sm text-slate-500 dark:text-slate-400 font-bold uppercase tracking-widest mb-1">Xếp loại thành tích</p>
                     <h3 id="summary-level-name" class="text-3xl font-black text-slate-800 dark:text-white mb-2">Đang tính...</h3>
-                    <p id="summary-level-quote" class="text-slate-600 dark:text-slate-300 italic text-sm">...</p>
+                    <p id="summary-level-quote" class="text-slate-600 dark:text-slate-300 italic text-sm px-4 text-center">...</p>
                 </div>
                 
                 <hr class="border-slate-100 dark:border-slate-700 mb-6">
@@ -464,12 +464,11 @@
         function renderContent(elementId, text) {
             const el = document.getElementById(elementId);
             
-            // Regex tìm URL ảnh (kết thúc bằng các định dạng ảnh phổ biến)
+            // Regex tìm URL ảnh
             const imgRegex = /(https?:\/\/.*\.(?:png|jpg|jpeg|gif|webp|svg)(\?.*)?)/gi;
             
             let processedText = text;
             
-            // Thay thế URL ảnh bằng tag img (hình vuông)
             processedText = processedText.replace(imgRegex, (url) => {
                 return `<div class="flex justify-center my-4">
                             <div class="w-32 h-32 md:w-56 md:h-56 bg-slate-100 dark:bg-slate-700 rounded-xl overflow-hidden border-2 border-slate-200 dark:border-slate-600 shadow-sm aspect-square">
@@ -480,7 +479,6 @@
 
             if (typeof katex !== 'undefined') {
                 try {
-                    // Xử lý KaTeX cho công thức toán
                     const rendered = processedText
                         .replace(/\$\$(.*?)\$\$/g, (m, math) => katex.renderToString(math, { displayMode: true, throwOnError: false }))
                         .replace(/\$(.*?)\$/g, (m, math) => katex.renderToString(math, { displayMode: false, throwOnError: false }));
@@ -494,7 +492,6 @@
             }
         }
 
-        // --- Hàm Đọc Dữ liệu ---
         function parseCSV(csvText) {
             const lines = csvText.split('\n');
             const parsedCards = [];
@@ -558,7 +555,6 @@
             }
         }
 
-        // --- Logic Phiên Học ---
         function initSession() {
             const studentName = document.getElementById('input-student-name').value;
             const className = document.getElementById('input-class-name').value;
@@ -576,16 +572,14 @@
 
         function loadCurrentCard() {
             if (queue.length === 0) {
-                confirmExit(); // Hết thẻ -> Tự động kết thúc
+                confirmExit();
                 return;
             }
 
-            // Thay đổi màu nền và viền ngẫu nhiên dịu mắt
             const bodyEl = document.getElementById('app-body');
             const cardFront = document.getElementById('card-front');
             const cardBack = document.getElementById('card-back');
 
-            // Xóa các class cũ
             bodyEl.classList.remove(currentBgClass);
             cardFront.classList.remove(currentBorderClass, 'dark:' + currentDarkBorderClass);
             cardBack.classList.remove(currentBorderClass, 'dark:' + currentDarkBorderClass);
@@ -601,7 +595,6 @@
             currentBorderClass = theme.border;
             currentDarkBorderClass = theme.darkBorder;
 
-            // Áp dụng class mới
             bodyEl.classList.add(currentBgClass);
             cardFront.classList.add(currentBorderClass, 'dark:' + currentDarkBorderClass);
             cardBack.classList.add(currentBorderClass, 'dark:' + currentDarkBorderClass);
@@ -616,7 +609,6 @@
             renderContent('card-front-content', card.front);
             renderContent('card-back-content', card.back);
             
-            // Reset lật thẻ
             isFlipped = false;
             document.getElementById('card-inner').classList.remove('rotate-y-180');
             document.getElementById('action-buttons').classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
@@ -635,7 +627,7 @@
         }
 
         function handleRating(rating, event) {
-            event.stopPropagation(); // Ngăn sự kiện click lật thẻ
+            event.stopPropagation();
             
             stats[rating]++;
             stats.totalReviewed++;
@@ -652,13 +644,11 @@
                 }
             }
 
-            // Chờ xíu để tạo cảm giác chuyển thẻ
             setTimeout(() => {
                 loadCurrentCard();
             }, 100);
         }
 
-        // --- Timer (Đồng hồ) ---
         function startTimer() {
             secondsElapsed = 0;
             updateTimerDisplay();
@@ -675,7 +665,6 @@
             document.getElementById('timer-display').innerText = `${m}:${s}`;
         }
 
-        // --- Logic Nút Thoát (Exit Modal) ---
         function showExitModal() {
             const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
             document.getElementById('exit-quote').innerText = `"${randomQuote}"`;
@@ -692,7 +681,6 @@
             generateSummary();
         }
 
-        // --- Logic Nút Hướng Dẫn (Guide Modal) ---
         function showGuideModal() {
             document.getElementById('guide-modal').classList.remove('hidden');
         }
@@ -701,7 +689,6 @@
             document.getElementById('guide-modal').classList.add('hidden');
         }
 
-        // --- Tính toán TỔNG KẾT & HUY CHƯƠNG ---
         function generateSummary() {
             showScreen('summary-screen');
             
@@ -712,7 +699,7 @@
             let sessionCount = parseInt(localStorage.getItem(storageKey) || '0') + 1;
             localStorage.setItem(storageKey, sessionCount);
             
-            document.getElementById('summary-session-count').innerText = `🔥 Lần học thứ ${sessionCount} cho mã bài học này`;
+            document.getElementById('summary-session-count').innerText = `🔥 Lần học thứ ${sessionCount}`;
 
             const m = Math.floor(secondsElapsed / 60);
             const s = secondsElapsed % 60;
@@ -725,32 +712,37 @@
 
             let levelName, quoteText, iconNode, bgColor;
 
-            if (avgTimePerCard < 5) {
+            // Kiểm tra cảnh báo (học vẹt - quá nhanh)
+            if (avgTimePerCard < 5 && stats.totalReviewed > 5) {
                 levelName = "Cảnh Báo"; bgColor = "bg-red-600";
-                iconNode = "⚠️ Cảnh báo"; 
-                quoteText = `Tốc độ: ${avgTimePerCard.toFixed(1)}s/thẻ. Quá nhanh! Tránh nhấn bừa để thực sự ghi nhớ kiến thức nhé.`;
-            } else if (avgTimePerCard <= 15) {
-                levelName = "Xuất Sắc"; bgColor = "bg-violet-600";
-                iconNode = "💎 Cúp Kim Cương"; 
-                quoteText = `Tốc độ: ${avgTimePerCard.toFixed(1)}s/thẻ. Phản xạ tuyệt đỉnh!`;
-            } else if (avgTimePerCard <= 30) {
-                levelName = "Giỏi"; bgColor = "bg-amber-500";
-                iconNode = "🥇 Huy Chương Vàng"; 
-                quoteText = `Tốc độ: ${avgTimePerCard.toFixed(1)}s/thẻ. Tuyệt cú mèo! Tốc độ suy luận rất tốt.`;
-            } else if (avgTimePerCard <= 60) {
-                levelName = "Khá"; bgColor = "bg-slate-500";
-                iconNode = "🥈 Huy Chương Bạc"; 
-                quoteText = `Tốc độ: ${avgTimePerCard.toFixed(1)}s/thẻ. Rất nỗ lực! Cần ôn luyện thêm để phản xạ nhạy hơn.`;
-            } else {
-                levelName = "Trung Bình"; bgColor = "bg-orange-600";
-                iconNode = "🥉 Huy Chương Đồng"; 
-                quoteText = `Tốc độ: ${avgTimePerCard.toFixed(1)}s/thẻ. Bạn cần dành thêm thời gian ghi nhớ công thức cơ bản.`;
-            }
-
-            if (stats.totalReviewed < 5) {
+                iconNode = "☹️"; 
+                quoteText = `Tốc độ: ${avgTimePerCard.toFixed(1)}s/thẻ. Bạn đang lật thẻ quá nhanh, icon này không hài lòng đâu! Hãy đọc kỹ công thức hơn nhé.`;
+            } 
+            // Điều kiện thời gian học phải từ 5 phút (300 giây) mới được xét hạng cao
+            else if (secondsElapsed < 300) {
                 levelName = "Khởi Động"; bgColor = "bg-blue-500";
-                iconNode = "🌱 Mầm Non"; 
-                quoteText = "Lần tới hãy cố gắng hoàn thành nhiều thẻ hơn nhé!";
+                iconNode = "🌱"; 
+                quoteText = "Làm nóng máy vậy là tốt, nhưng bạn cần kiên trì học ít nhất 5 phút để được xét nhận các Huy chương hạng cao nhé!";
+            } 
+            // Đạt điều kiện thời gian > 5 phút
+            else {
+                if (avgTimePerCard <= 15) {
+                    levelName = "Xuất Sắc"; bgColor = "bg-violet-600";
+                    iconNode = "👑"; 
+                    quoteText = `Tốc độ: ${avgTimePerCard.toFixed(1)}s/thẻ. Phản xạ đỉnh cao! Bạn xứng đáng với Vương miện vinh quang này.`;
+                } else if (avgTimePerCard <= 30) {
+                    levelName = "Giỏi"; bgColor = "bg-amber-500";
+                    iconNode = "🏆"; 
+                    quoteText = `Tốc độ: ${avgTimePerCard.toFixed(1)}s/thẻ. Tuyệt vời! Bạn là một chiến binh thực thụ trên đấu trường công thức.`;
+                } else if (avgTimePerCard <= 60) {
+                    levelName = "Khá"; bgColor = "bg-slate-500";
+                    iconNode = "🥇"; 
+                    quoteText = `Tốc độ: ${avgTimePerCard.toFixed(1)}s/thẻ. Rất nỗ lực! Bạn đã nắm vững kiến thức, chỉ cần rèn luyện thêm chút tốc độ.`;
+                } else {
+                    levelName = "Trung Bình"; bgColor = "bg-orange-600";
+                    iconNode = "🥈"; 
+                    quoteText = `Tốc độ: ${avgTimePerCard.toFixed(1)}s/thẻ. Bạn đã hoàn thành bài học, hãy cố gắng cải thiện tốc độ vào lần sau nhé!`;
+                }
             }
 
             document.getElementById('summary-header').className = `p-8 text-white text-center transition-colors duration-500 rounded-b-3xl shadow-md ${bgColor}`;
@@ -762,8 +754,8 @@
             const dateFormatted = `${now.getDate().toString().padStart(2, '0')}/${(now.getMonth() + 1).toString().padStart(2, '0')}/${now.getFullYear()}`;
             document.getElementById('summary-date-text').innerText = `Hoàn thành lúc ${timeFormatted} - Ngày ${dateFormatted}`;
             
-            document.getElementById('summary-medal-icon').innerText = iconNode.split(' ')[0];
-            document.getElementById('summary-level-name').innerText = levelName + " (" + iconNode.substring(2) + ")";
+            document.getElementById('summary-medal-icon').innerText = iconNode;
+            document.getElementById('summary-level-name').innerText = levelName;
             document.getElementById('summary-level-quote').innerText = `"${quoteText}"`;
 
             document.getElementById('stat-total').innerText = stats.totalReviewed;
@@ -776,7 +768,7 @@
         function downloadSummaryImage(event) {
             const btn = event.currentTarget;
             const originalHTML = btn.innerHTML;
-            btn.innerHTML = '<i class="ph-bold ph-spinner animate-spin text-xl"></i> Đang xử lý...';
+            btn.innerHTML = '<i class="ph-bold ph-spinner animate-spin text-xl"></i>';
             btn.disabled = true;
 
             const summaryCard = document.getElementById('summary-card-content');
